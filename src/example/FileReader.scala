@@ -1,13 +1,13 @@
 package example
 
-import scala.io.Source
+import scala.io.{BufferedSource, Source}
 
 object FileReader {
 
   def convertFileToString(filename: String): String = {
-    var contents : String = ""
-    val file = Source.fromFile(filename)
-    for(line <- file.getLines()){
+    var contents: String = ""
+    val file: BufferedSource = Source.fromFile(filename)
+    for (line <- file.getLines()) {
       contents += line + "\n"
     }
     contents
