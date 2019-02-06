@@ -30,9 +30,12 @@ class TestComputeSize extends FunSuite {
 
 
   test("Use many test cases for each category"){
-    val largeDoubles: Array[Double] = Array(60.0, 60.01, 70.0, 90.0, 1000.0)
+    // notice largeDoubles must be declared with var we change its value
+    var largeDoubles: Array[Double] = Array(60.0, 60.01, 70.0, 90.0, 1000.0)
     val mediumDoubles: Array[Double] = Array(59.9, 30.0, 30.01, 40.0, 50.0)
     val smallDoubles: Array[Double] = Array(29.99, 20.0, 10.0, 0.0, -100.0, -10000.0)
+
+    largeDoubles = largeDoubles :+ 10000.0 // Example of adding an element to an Array
 
     for(largeDouble <- largeDoubles){
       assert(Conditional.computeSize(largeDouble) == "large", largeDouble)
