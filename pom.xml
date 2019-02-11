@@ -13,5 +13,13 @@
             <artifactId>scalatest_2.12</artifactId>
             <version>3.0.5</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.scalafx/scalafx -->
+        <dependency>
+            <groupId>org.scalafx</groupId>
+            <artifactId>scalafx_2.12</artifactId>
+            <version>11-R16</version>
+        </dependency>
+
     </dependencies>
 </project>
